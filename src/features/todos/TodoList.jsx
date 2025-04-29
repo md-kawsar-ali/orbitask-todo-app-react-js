@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import TodoCard from "./TaskCard";
 
 const TodoList = () => {
 	const todos = useSelector((state) => state.todos);
@@ -21,6 +22,12 @@ const TodoList = () => {
 
 					<h4 className="text-4xl md:text-5xl font-bold">{pendingTodos.length === 0 ? "0" : pendingTodos.length.toString().padStart(2, "0")}</h4>
 				</div>
+
+				<div className="grid grid-col gap-7 mt-7">
+					{pendingTodos?.map((todo) => (
+						<TodoCard key={todo.id} {...todo} />
+					))}
+				</div>
 			</div>
 
 			<div>
@@ -34,6 +41,12 @@ const TodoList = () => {
 
 					<h4 className="text-4xl md:text-5xl font-bold">{ongoingTodos.length === 0 ? "0" : ongoingTodos.length.toString().padStart(2, "0")}</h4>
 				</div>
+
+				<div className="grid grid-col gap-7 mt-7">
+					{ongoingTodos?.map((todo) => (
+						<TodoCard key={todo.id} {...todo} />
+					))}
+				</div>
 			</div>
 
 			<div>
@@ -46,6 +59,12 @@ const TodoList = () => {
 					</div>
 
 					<h4 className="text-4xl md:text-5xl font-bold">{completedTodos.length === 0 ? "0" : completedTodos.length.toString().padStart(2, "0")}</h4>
+				</div>
+
+				<div className="grid grid-col gap-7 mt-7">
+					{completedTodos?.map((todo) => (
+						<TodoCard key={todo.id} {...todo} />
+					))}
 				</div>
 			</div>
 		</div>

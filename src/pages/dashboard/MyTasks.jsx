@@ -6,7 +6,7 @@ const MyTasks = () => {
 		<>
 			<Header title="My Tasks" />
 
-			<div className="px-5 md:px-8">
+			<div className="px-5 py-8 md:px-8">
 				<p>Here is my all tasks!</p>
 			</div>
 		</>

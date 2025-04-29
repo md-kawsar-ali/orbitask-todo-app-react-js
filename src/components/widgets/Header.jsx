@@ -3,7 +3,7 @@ import userImg from "../../assets/user.jpeg";
 
 const Header = ({ title = "Welcome back!", children }) => {
 	return (
-		<div className="navbar border-b-1 border-slate-700 lg:px-8 lg:py-4">
+		<div className="navbar border-b-1 border-slate-700 pe-4 lg:px-8 lg:py-4">
 			<label htmlFor="my-drawer" className="btn btn-ghost btn-circle lg:hidden">
 				<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />

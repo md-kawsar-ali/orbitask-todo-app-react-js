@@ -6,7 +6,7 @@ const Settings = () => {
 		<>
 			<Header title="Settings" />
 
-			<div className="p-8">
+			<div className="px-5 md:px-8">
 				<p>Account Settings here!</p>
 			</div>
 		</>

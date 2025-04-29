@@ -13,7 +13,7 @@ const DashboardHome = () => {
 				</Modal>
 			</Header>
 
-			<div className="p-8">
+			<div className="px-5 md:px-8">
 				<TodoList />
 			</div>
 		</>

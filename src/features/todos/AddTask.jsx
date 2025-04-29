@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 const AddTask = () => {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
-	const [assignTo, setAssignTo] = useState("");
+	const [assignedTo, setAssignedTo] = useState("");
 	const [priority, setPriority] = useState("");
 	const [dueDate, setDueDate] = useState(new Date());
 
@@ -19,27 +19,35 @@ const AddTask = () => {
 	const handleAddTask = (e) => {
 		e.preventDefault();
 
-		if (isInvalid(title) || isInvalid(description) || isInvalid(assignTo) || isInvalid(priority)) {
-			toast.error("Please fill in all the fields!");
+		if (isInvalid(title) || isInvalid(description) || isInvalid(assignedTo) || isInvalid(priority)) {
+			toast.error("Please fill in all the fields!", {
+				style: {
+					fontWeight: "bold",
+				},
+			});
 			return;
 		}
 
 		const payload = {
 			title,
 			description,
-			assignTo,
+			assignedTo,
 			priority,
 			dueDate: dueDate.toISOString().split("T")[0],
 		};
 
 		dispatch(addTodo(payload));
 
-		toast.success("A New Task Assigned!");
+		toast.success("A New Task Assigned!", {
+			style: {
+				fontWeight: "bold",
+			},
+		});
 
 		// Reset Forms
 		setTitle("");
 		setDescription("");
-		setAssignTo("");
+		setAssignedTo("");
 		setPriority("");
 		setDueDate(new Date());
 
@@ -68,10 +76,10 @@ const AddTask = () => {
 
 				<div className="grid grid-col md:grid-cols-2 gap-4">
 					<div>
-						<label id="assignTo" className="label text-sm mb-1">
+						<label id="assignedTo" className="label text-sm mb-1">
 							Assign To
 						</label>
-						<select value={assignTo} id="assignTo" onChange={(e) => setAssignTo(e.target.value)} className="select h-12 text-base w-full focus:outline-none focus:border-indigo-500">
+						<select value={assignedTo} id="assignedTo" onChange={(e) => setAssignedTo(e.target.value)} className="select h-12 text-base w-full focus:outline-none focus:border-indigo-500">
 							<option value="" disabled={true}>
 								Team Member
 							</option>

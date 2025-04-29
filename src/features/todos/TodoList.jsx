@@ -10,8 +10,8 @@ const TodoList = () => {
 	const completedTodos = todos?.filter((todo) => todo.status === "completed");
 
 	return (
-		<div className="grid grid-cols md:grid-cols-3 gap-7">
-			<div>
+		<div className="flex flex-col md:flex-row">
+			<div className="py-8">
 				<div className="flex justify-between items-center bg-violet-600 text-white rounded-lg py-5 px-6">
 					<div>
 						<svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,9 @@ const TodoList = () => {
 				</div>
 			</div>
 
-			<div>
+			<div className="divider divider-vertical md:divider-horizontal"></div>
+
+			<div className="py-8">
 				<div className="flex justify-between items-center bg-blue-600 text-white rounded-lg py-5 px-6">
 					<div>
 						<svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +51,9 @@ const TodoList = () => {
 				</div>
 			</div>
 
-			<div>
+			<div className="divider divider-vertical md:divider-horizontal"></div>
+
+			<div className="py-8">
 				<div className="flex justify-between items-center bg-green-600 text-white rounded-lg py-5 px-6">
 					<div>
 						<svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

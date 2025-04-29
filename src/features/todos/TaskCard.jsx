@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../../components/common/Modal";
 
 const TaskCard = ({ id, title, description, assignedTo, assignedBy, priority, dueDate, createdAt, status }) => {
 	return (
@@ -30,6 +31,13 @@ const TaskCard = ({ id, title, description, assignedTo, assignedBy, priority, du
 				{priority === "low" && <div className="badge rounded-full py-3 font-bold badge-primary">Low</div>}
 				{priority === "medium" && <div className="badge rounded-full py-3 font-bold badge-warning">Medium</div>}
 				{priority === "high" && <div className="badge rounded-full py-3 font-bold badge-error">High</div>}
+			</div>
+
+			<div className="px-4 pt-1 pb-3">
+				<Modal selector={id} btnText="View Details" btnClass="w-full">
+					<h2 className="text-2xl font-bold text-white leading-[1.5] mb-4">{title}</h2>
+					<p className="font-medium text-slate-200">{description}</p>
+				</Modal>
 			</div>
 		</div>
 	);

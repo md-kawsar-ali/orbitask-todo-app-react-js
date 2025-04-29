@@ -63,7 +63,7 @@ const AddTask = () => {
 						Description
 					</label>
 
-					<textarea placeholder="Enter description" id="description" className="textarea text-base w-full focus:outline-none focus:border-indigo-500" value={description} onChange={(e) => setDescription(e.target.value)} rows={4}></textarea>
+					<textarea placeholder="Enter description" id="description" className="textarea text-base w-full focus:outline-none focus:border-indigo-500" value={description} onChange={(e) => setDescription(e.target.value)} rows={2}></textarea>
 				</div>
 
 				<div className="grid grid-col md:grid-cols-2 gap-4">

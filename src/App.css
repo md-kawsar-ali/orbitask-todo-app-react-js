@@ -3,3 +3,58 @@
 @plugin "daisyui" {
     themes: dark --default;
 }
+
+.react-datepicker__header {
+    background-color: var(--color-primary) !important;
+    border-bottom: 1px solid var(--color-primary) !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header,
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    color: var(--color-white) !important;
+}
+
+.react-datepicker {
+    font-size: 0.85rem !important;
+    background-color: var(--color-base-200) !important;
+    color: var(--color-white) !important;
+    border: 1px solid var(--color-primary) !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day:not([aria-disabled=true]):hover,
+.react-datepicker__month-text:not([aria-disabled=true]):hover,
+.react-datepicker__quarter-text:not([aria-disabled=true]):hover,
+.react-datepicker__year-text:not([aria-disabled=true]):hover {
+    border-radius: 50% !important;
+    background: var(--color-primary) !important;
+    transition: background 0.2s;
+}
+
+.react-datepicker__day--keyboard-selected {
+    border-radius: 50% !important;
+    background-color: transparent !important;
+}
+
+.react-datepicker__day--disabled,
+.react-datepicker__month-text--disabled,
+.react-datepicker__quarter-text--disabled,
+.react-datepicker__year-text--disabled {
+    color: #717883 !important;
+}
+
+.react-datepicker__triangle {
+    fill: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+    stroke: var(--color-primary) !important;
+}
+
+.react-datepicker__navigation-icon::before {
+    border-color: var(--color-white) !important;
+}

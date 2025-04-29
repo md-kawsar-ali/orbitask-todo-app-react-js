@@ -8,7 +8,7 @@ const Modal = ({ selector, btnText = "Open Modal", children }) => {
 				{btnText}
 			</button>
 			<dialog id={selector} className="modal">
-				<div className="modal-box">
+				<div className="modal-box max-h-[94vh] md:max-h-[100vh]">
 					<form method="dialog">
 						<button className="btn px-3 btn-lg bg-transparent shadow-none border-none absolute right-2 top-2">✕</button>
 					</form>

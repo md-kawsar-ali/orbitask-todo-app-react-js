@@ -1,0 +1,15 @@
+import React from "react";
+import Header from "../../components/widgets/Header";
+
+const Team = () => {
+	return (
+		<>
+			<Header title="Our Team" />
+			<div className="p-8">
+				<p>This is our team!</p>
+			</div>
+		</>
+	);
+};
+
+export default Team;
